@@ -4,7 +4,6 @@ public class FinancialPlanner {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Input: Salary, Monthly Expenses, Item Cost, Loan Interest Rate
         System.out.print("Enter your monthly salary: ");
         double salary = scanner.nextDouble();
 
@@ -17,13 +16,10 @@ public class FinancialPlanner {
         System.out.print("Enter the loan interest rate: "); //(Decimal Format)
         double loanInterestRate = scanner.nextDouble();
 
-        //  savings per month
         double savingsPerMonth = salary - expenses;
 
-        //  time to buy the item with savings
         double timeWithSavings = itemCost / savingsPerMonth;
 
-        //  time to buy the item with a loan
         double monthlyLoanPayment = itemCost * loanInterestRate / 12.0;
         double timeWithLoan = itemCost / monthlyLoanPayment;
 
